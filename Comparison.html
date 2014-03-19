@@ -1,0 +1,32 @@
+<html>
+<body>
+<form>
+Number 1 = <input id="n1" type="text"/>
+Number 2 = <input id="n2" type="text"/>
+<br/><br/>
+<button onclick="compare()"> Compare </button>
+<button onclick="max()"> Max </button>
+</form>
+<script>
+
+function compare() {
+var x = document.getElementById('n1').value;
+var y = document.getElementById('n2').value;
+if (x > y) {
+	alert(x + " is bigger than " + y); }
+else if (x < y) {
+	alert(x + " is smaller than " + y); }
+else {
+	alert(x + " is equal to " + y); }
+}
+
+function max() {
+var x = document.getElementById('n1').value;
+var y = document.getElementById('n2').value;
+var a = Math.max(x,y);
+alert(a + " is the maximum");
+}
+
+</script>
+</body>
+</html>

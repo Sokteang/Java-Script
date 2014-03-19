@@ -1,0 +1,46 @@
+<html>
+<body>
+<form>
+String = <input id="n" type="text"/>
+<button onclick="myfuncNum()"> Is it numeric? </button>
+<button onclick="myfuncPalindrome()"> Is it palindrome? </button>
+<button onclick="myfuncString()"> Is it a string null? </button>
+</form>
+<script>
+	
+function myfuncNum() {
+	var x = document.getElementById('n').value;
+	if (isNaN(x)) {
+		alert(x + " are not numbers");
+	} 
+	else {
+		alert(x + " are numbers");
+	}
+}
+
+ function myfuncPalindrome() {
+   var revStr = "";
+   var x = document.getElementById("n").value;
+   var i = x.length;
+   for(var j=i; j>=0; j--) {
+      revStr = revStr+x.charAt(j);
+   }
+   if(x == revStr) {
+      alert(x+" is Palindrome");
+   } else {
+      alert(x+" is not a Palindrome");
+   }
+}
+
+function myfuncString() {
+	x = document.getElementById('n').value;
+		if (x == "") {
+		alert("The string is null");
+	} 
+	else {
+		alert("\"" + x + "\" is not null");
+	}
+}
+</script>
+</body>
+</html>

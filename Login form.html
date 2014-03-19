@@ -1,0 +1,60 @@
+<html>
+<head>
+   <script>
+	function verifyUser() {
+		var x = document.getElementById('user').value;
+		if (x == "") {
+			alert("User Name cannot be empty");
+			document.getElementById('user').focus();
+		}
+	}
+
+	function verifypass() {
+	        var y = document.getElementById('pass').value;
+		if (y == "") {
+			alert("Password cannot be empty");
+			document.getElementById('pass').focus();
+		}
+	}
+ 	function verify() {
+        var x=document.getElementById('user').value;
+		if (x == "") {
+			alert("User Name cannot be empty");	
+		}
+        var y = document.getElementById('pass').value;
+
+        if (y.length < 9) {
+          alert("password should be longer than 9 characters!");
+		document.getElementById('pass').value = ""; 
+		document.getElementById('pass').focus();}
+
+        if (x!="" && y!="" && y.length > 9) {
+          alert("login successful"); }
+        }
+
+   </script>
+</head>
+
+<body>
+	
+	<form name="Login Form">
+	<br/><br/><br/>
+	<table  width="30%"  align="center" bgcolor="FFFF99" border="1">
+		<tr> <td align="center">
+		<b> Login form: </b> <br/><br/> 
+		User Name: <input type="text name="uname" id="user" onblur="verifyUser()"/>
+		<br/><br/>
+		Password: <input type="password" name="pwd" id="pass" onblur="verifypass()"/>
+		<br/><br/>
+
+		<input name="btnLogin" type="button" value="Login" onclick="verify()"/>
+
+		<br/><br/>
+		</td> </tr> 
+	</table>
+
+
+	</form>
+	 
+</body>
+</html>
